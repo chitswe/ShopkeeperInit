@@ -3,14 +3,14 @@ import fs from 'fs';
 
 
 
-fs.readdir('./pic/',(err,files)=>{
-	files.forEach(f=>{
-		let split= f.split('_')[0];
-		if(!isNaN(split)){
-			fs.rename(`./pic/${f}`,`./pic/${f.replace(split + '_','')}`);
-		}
-	});
-});
+// fs.readdir('./pic/',(err,files)=>{
+// 	files.forEach(f=>{
+// 		let split= f.split('_')[0];
+// 		if(!isNaN(split)){
+// 			fs.rename(`./pic/${f}`,`./pic/${f.replace(split + '_','')}`);
+// 		}
+// 	});
+// });
 
 
 
