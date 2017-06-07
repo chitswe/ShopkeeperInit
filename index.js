@@ -13,6 +13,7 @@ cloudinary.config({
 const fileName = "./pictures.json";
 
 jsonfile.readFile(fileName,(err,images)=>{
+	console.log(images.length);
 	let promises = images.map((i,index)=>{
 		return new Promise((r,j)=>{
 			let {pic,format,completed} = i;
