@@ -1,23 +1,18 @@
 import pictures from './pictures';
 import fs from 'fs';
-
-
-
-// fs.readdir('./pic/',(err,files)=>{
-// 	files.forEach(f=>{
-// 		let split= f.split('_')[0];
-// 		if(!isNaN(split)){
-// 			fs.rename(`./pic/${f}`,`./pic/${f.replace(split + '_','')}`);
-// 		}
-// 	});
-// });
+import jsonfile from 'jsonfile';
 
 
 
 
 
-let promises = pictures.map(pic=>{
-	return new Promise(resolve=>{
+
+const fileName = "./pictures.json";
+jsonfile.readFile(fileName,(err,pictures)=>{
+	console.log(err);
+	let promises = pictures.map(picture=>{
+		let {pic} = picture;
+		return new Promise(resolve=>{
 		fs.exists(`./pic/${pic}.png`,e=>{
 			if(e){
 				resolve({pic,format:'png'});
@@ -34,11 +29,13 @@ let promises = pictures.map(pic=>{
 			}
 		});
 	});
+	});
+	Promise.all(promises).then(result=>{
+		jsonfile.writeFile(fileName,result,{space:2});
+	});
 });
 
-Promise.all(promises).then(result=>{
-	console.log(result);
-})
+
 
 
 
