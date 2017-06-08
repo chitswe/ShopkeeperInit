@@ -3,122 +3,249 @@ module.exports={
     up:(queryInterface,Sequelize)=>{
         return queryInterface.sequelize.transaction(t=>{
 			let promise=[
-			models.ProductGroup.create({  id:1,  Alias:"AUDIO", Name:"AUDIO", Photo:"shopkeeper/productgroup/audio", PhotoFormat:"1", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:null}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:132,  Alias:"Special Sale Items", Name:"Special Sale Items", Photo:"", PhotoFormat:"132", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:108,  Alias:"Accessories", Name:"Accessories", Photo:"shopkeeper/productgroup/accessories", PhotoFormat:"108", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:87,  Alias:"Consumer Electronics", Name:"Consumer Electronics", Photo:"shopkeeper/productgroup/consumer-electronics", PhotoFormat:"87", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:111,  Alias:"Recording", Name:"Recording", Photo:"", PhotoFormat:"111", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:123,  Alias:"Guitars", Name:"Guitars", Photo:"", PhotoFormat:"123", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:44,  Alias:"Non-POWERED MIXERS", Name:"Non-POWERED MIXERS", Photo:"shopkeeper/productgroup/non-powered-mixers", PhotoFormat:"44", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:45,  Alias:"POWERED MIXERS", Name:"POWERED MIXERS", Photo:"shopkeeper/productgroup/powered-mixers", PhotoFormat:"45", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:51,  Alias:"Public Address Systems", Name:"Public Address Systems", Photo:"shopkeeper/productgroup/public-address-systems", PhotoFormat:"51", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:73,  Alias:"Processing and Effects", Name:"Processing and Effects", Photo:"shopkeeper/productgroup/processing-and-effects", PhotoFormat:"73", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:80,  Alias:"Spare Parts", Name:"Spare Parts", Photo:"shopkeeper/productgroup/spare-parts", PhotoFormat:"80", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:11,  Alias:"SPEAKER", Name:"SPEAKER", Photo:"shopkeeper/productgroup/speaker", PhotoFormat:"11", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:12,  Alias:"AMPLIFIER", Name:"AMPLIFIER", Photo:"shopkeeper/productgroup/amplifier", PhotoFormat:"12", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:13,  Alias:"SUB WOOFER", Name:"SUB WOOFER", Photo:"shopkeeper/productgroup/sub-woofer", PhotoFormat:"13", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:14,  Alias:"MICROPHONE", Name:"MICROPHONE", Photo:"shopkeeper/productgroup/microphone", PhotoFormat:"14", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:1}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:36,  Alias:"Portable Speakers", Name:"Portable Speakers", Photo:"", PhotoFormat:"36", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:11}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:100,  Alias:"Ceiling / Wall Speakers", Name:"Ceiling / Wall Speakers", Photo:"shopkeeper/productgroup/ceiling-wall-speakers", PhotoFormat:"100", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:11}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:101,  Alias:"Wall Speakers", Name:"Wall Speakers", Photo:"", PhotoFormat:"101", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:11}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:112,  Alias:"Impulse Series", Name:"Impulse Series", Photo:"", PhotoFormat:"112", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:11}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:133,  Alias:"Active Speakers", Name:"Active Speakers", Photo:"", PhotoFormat:"133", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:11}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:21,  Alias:"Karaoke Speakers", Name:"Karaoke Speakers", Photo:"shopkeeper/productgroup/karaoke-speakers", PhotoFormat:"21", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:11}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:22,  Alias:"Professional Speakers", Name:"Professional Speakers", Photo:"shopkeeper/productgroup/professional-speakers", PhotoFormat:"22", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:11}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:24,  Alias:"CSV Series", Name:"CSV Series", Photo:"shopkeeper/productgroup/csv-series", PhotoFormat:"24", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:21}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:25,  Alias:"CSD Series", Name:"CSD Series", Photo:"shopkeeper/productgroup/csd-series", PhotoFormat:"25", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:21}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:26,  Alias:"CSX Series", Name:"CSX Series", Photo:"shopkeeper/productgroup/csx-series", PhotoFormat:"26", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:21}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:27,  Alias:"CSN Series", Name:"CSN Series", Photo:"shopkeeper/productgroup/csn-series", PhotoFormat:"27", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:21}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:28,  Alias:"CSJ Series", Name:"CSJ Series", Photo:"shopkeeper/productgroup/csj-series", PhotoFormat:"28", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:21}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:94,  Alias:"CSE Series", Name:"CSE Series", Photo:"shopkeeper/productgroup/cse-series", PhotoFormat:"94", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:21}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:122,  Alias:"Home Category", Name:"Home Category", Photo:"shopkeeper/productgroup/home-category", PhotoFormat:"122", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:21}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:29,  Alias:"CSP Series", Name:"CSP Series", Photo:"shopkeeper/productgroup/csp-series", PhotoFormat:"29", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:31,  Alias:"PR Series", Name:"PR Series", Photo:"shopkeeper/productgroup/pr-series", PhotoFormat:"31", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:32,  Alias:"PV Series", Name:"PV Series", Photo:"shopkeeper/productgroup/pv-series", PhotoFormat:"32", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:33,  Alias:"PV Series", Name:"PV Series", Photo:"shopkeeper/productgroup/hroothomeaungwin92-002wwwconeicstorepluginssevenspikesnoppluginsproductribbonsribbonpicturesmotion_l", PhotoFormat:"33", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:34,  Alias:"SP Series", Name:"SP Series", Photo:"shopkeeper/productgroup/sp-series", PhotoFormat:"34", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:35,  Alias:"QW Series", Name:"QW Series", Photo:"shopkeeper/productgroup/qw-series", PhotoFormat:"35", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:40,  Alias:"VR Series", Name:"VR Series", Photo:"shopkeeper/productgroup/vr-series", PhotoFormat:"40", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:63,  Alias:"PVX™ Series", Name:"PVX™ Series", Photo:"shopkeeper/productgroup/pvx-series", PhotoFormat:"63", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:90,  Alias:"PBK Series", Name:"PBK Series", Photo:"shopkeeper/productgroup/pbk-series", PhotoFormat:"90", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:107,  Alias:"CSS Series", Name:"CSS Series", Photo:"shopkeeper/productgroup/css-series", PhotoFormat:"107", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:114,  Alias:"Dark Matter Series", Name:"Dark Matter Series", Photo:"shopkeeper/productgroup/dark-matter-series", PhotoFormat:"114", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:22}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:37,  Alias:"Escort System", Name:"Escort System", Photo:"", PhotoFormat:"37", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:36}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:102,  Alias:"PHR Series", Name:"PHR Series", Photo:"shopkeeper/productgroup/phr-series", PhotoFormat:"102", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:100}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:103,  Alias:"WS Series", Name:"WS Series", Photo:"shopkeeper/productgroup/ws-series", PhotoFormat:"103", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:100}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:61,  Alias:"Crest Amplifiers", Name:"Crest Amplifiers", Photo:"shopkeeper/productgroup/crest-amplifiers", PhotoFormat:"61", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:12}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:23,  Alias:"Power Amplifiers", Name:"Power Amplifiers", Photo:"shopkeeper/productgroup/power-amplifiers", PhotoFormat:"23", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:12}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:76,  Alias:"Karaoke Amplifier", Name:"Karaoke Amplifier", Photo:"shopkeeper/productgroup/karaoke-amplifier", PhotoFormat:"76", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:12}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:85,  Alias:"Instrument Amplifiers", Name:"Instrument Amplifiers", Photo:"shopkeeper/productgroup/instrument-amplifiers", PhotoFormat:"85", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:12}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:106,  Alias:"Modular Amp Mixer", Name:"Modular Amp Mixer", Photo:"", PhotoFormat:"106", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:12}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:30,  Alias:"DAP Series", Name:"DAP Series", Photo:"shopkeeper/productgroup/dap-series", PhotoFormat:"30", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:23}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:41,  Alias:"CS Series", Name:"CS Series", Photo:"shopkeeper/productgroup/cs-series", PhotoFormat:"41", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:23}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:42,  Alias:"PV Series", Name:"PV Series", Photo:"shopkeeper/productgroup/pv-series", PhotoFormat:"42", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:23}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:43,  Alias:"IPR 2 Series", Name:"IPR 2 Series", Photo:"shopkeeper/productgroup/ipr-2-series", PhotoFormat:"43", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:23}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:78,  Alias:"PV Series", Name:"PV Series", Photo:"", PhotoFormat:"78", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:23}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:79,  Alias:"PV Series", Name:"PV Series", Photo:"", PhotoFormat:"79", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:23}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:65,  Alias:"CC Series", Name:"CC Series", Photo:"shopkeeper/productgroup/cc-series", PhotoFormat:"65", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:61}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:66,  Alias:"CPX Series", Name:"CPX Series", Photo:"shopkeeper/productgroup/cpx-series", PhotoFormat:"66", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:61}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:55,  Alias:"Guitar Amplifiers", Name:"Guitar Amplifiers", Photo:"shopkeeper/productgroup/guitar-amplifiers", PhotoFormat:"55", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:85}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:58,  Alias:"Bass Amplifiers", Name:"Bass Amplifiers", Photo:"shopkeeper/productgroup/bass-amplifiers", PhotoFormat:"58", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:85}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:60,  Alias:"Keyboard Amplifiers", Name:"Keyboard Amplifiers", Photo:"shopkeeper/productgroup/keyboard-amplifiers", PhotoFormat:"60", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:85}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:97,  Alias:"Lead Amplifiers", Name:"Lead Amplifiers", Photo:"", PhotoFormat:"97", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:85}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:120,  Alias:"TransTube", Name:"TransTube", Photo:"", PhotoFormat:"120", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:85}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:127,  Alias:"Acoustic Amplifiers", Name:"Acoustic Amplifiers", Photo:"", PhotoFormat:"127", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:85}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:56,  Alias:"Vypyr® VIP Series", Name:"Vypyr® VIP Series", Photo:"shopkeeper/productgroup/vypyr-vip-series", PhotoFormat:"56", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:55}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:57,  Alias:"ValveKing® Series", Name:"ValveKing® Series", Photo:"shopkeeper/productgroup/valveking-series", PhotoFormat:"57", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:55}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:128,  Alias:"Classic Series", Name:"Classic Series", Photo:"", PhotoFormat:"128", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:55}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:129,  Alias:"TransTube", Name:"TransTube", Photo:"", PhotoFormat:"129", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:55}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:59,  Alias:"Tour™ Series", Name:"Tour™ Series", Photo:"shopkeeper/productgroup/tour-series", PhotoFormat:"59", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:58}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:86,  Alias:"Headliner Series", Name:"Headliner Series", Photo:"", PhotoFormat:"86", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:58}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:99,  Alias:"VB Series", Name:"VB Series", Photo:"", PhotoFormat:"99", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:58}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:113,  Alias:"MiniMEGA", Name:"MiniMEGA", Photo:"", PhotoFormat:"113", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:58}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:130,  Alias:"MiniMAX", Name:"MiniMAX", Photo:"", PhotoFormat:"130", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:58}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:131,  Alias:"PVH Series", Name:"PVH Series", Photo:"", PhotoFormat:"131", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:58}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:98,  Alias:"6505 Series", Name:"6505 Series", Photo:"", PhotoFormat:"98", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:97}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:68,  Alias:"VR Series", Name:"VR Series", Photo:"shopkeeper/productgroup/vr-series", PhotoFormat:"68", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:69,  Alias:"PV Series", Name:"PV Series", Photo:"shopkeeper/productgroup/pv-series", PhotoFormat:"69", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:70,  Alias:"PR Series", Name:"PR Series", Photo:"shopkeeper/productgroup/pr-series", PhotoFormat:"70", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:71,  Alias:"CSW Series", Name:"CSW Series", Photo:"shopkeeper/productgroup/csw-series", PhotoFormat:"71", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:77,  Alias:"PVX Series", Name:"PVX Series", Photo:"shopkeeper/productgroup/pvx-series", PhotoFormat:"77", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:115,  Alias:"Dark Matter Series", Name:"Dark Matter Series", Photo:"", PhotoFormat:"115", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:116,  Alias:"QW Series", Name:"QW Series", Photo:"shopkeeper/productgroup/qw-series", PhotoFormat:"116", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:117,  Alias:"SP Series", Name:"SP Series", Photo:"", PhotoFormat:"117", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:13}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:95,  Alias:"Specialty Series", Name:"Specialty Series", Photo:"", PhotoFormat:"95", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:96,  Alias:"Specialty Series", Name:"Specialty Series", Photo:"", PhotoFormat:"96", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:118,  Alias:"Studio Pro Series", Name:"Studio Pro Series", Photo:"", PhotoFormat:"118", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:119,  Alias:"Specialty Mics", Name:"Specialty Mics", Photo:"", PhotoFormat:"119", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:46,  Alias:"PV Series", Name:"PV Series", Photo:"shopkeeper/productgroup/pv-series", PhotoFormat:"46", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:67,  Alias:"NKN Series", Name:"NKN Series", Photo:"shopkeeper/productgroup/nkn-series", PhotoFormat:"67", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:72,  Alias:"PVM Series", Name:"PVM Series", Photo:"shopkeeper/productgroup/pvm-series", PhotoFormat:"72", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:75,  Alias:"PVM DMS-5 Drum Mic System", Name:"PVM DMS-5 Drum Mic System", Photo:"shopkeeper/productgroup/pvm-dms-5-drum-mic-system", PhotoFormat:"75", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:91,  Alias:"Wireless", Name:"Wireless", Photo:"", PhotoFormat:"91", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:14}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:92,  Alias:"Handheld", Name:"Handheld", Photo:"", PhotoFormat:"92", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:91}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:93,  Alias:"Infrared Microphone", Name:"Infrared Microphone", Photo:"shopkeeper/productgroup/infrared-microphone", PhotoFormat:"93", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:91}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:47,  Alias:"FX™ 2 Series", Name:"FX™ 2 Series", Photo:"shopkeeper/productgroup/fx-2-series", PhotoFormat:"47", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:44}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:48,  Alias:"PV® Series", Name:"PV® Series", Photo:"shopkeeper/productgroup/pv-series", PhotoFormat:"48", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:44}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:49,  Alias:"XR® Series", Name:"XR® Series", Photo:"shopkeeper/productgroup/xr-series", PhotoFormat:"49", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:45}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:50,  Alias:"PVi® Series", Name:"PVi® Series", Photo:"shopkeeper/productgroup/pvi-series", PhotoFormat:"50", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:45}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:52,  Alias:"Escort® System", Name:"Escort® System", Photo:"shopkeeper/productgroup/escort-system", PhotoFormat:"52", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:51}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:53,  Alias:"PVi Portable", Name:"PVi Portable", Photo:"", PhotoFormat:"53", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:51}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:54,  Alias:"PVi Portable", Name:"PVi Portable", Photo:"", PhotoFormat:"54", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:51}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:62,  Alias:"PVi® Portable Series", Name:"PVi® Portable Series", Photo:"shopkeeper/productgroup/pvi-portable-series", PhotoFormat:"62", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:51}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:83,  Alias:"TriFlex II ", Name:"TriFlex II ", Photo:"shopkeeper/productgroup/triflex-ii", PhotoFormat:"83", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:51}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:15,  Alias:"Sound Processors", Name:"Sound Processors", Photo:"shopkeeper/productgroup/sound-processors", PhotoFormat:"15", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:73}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:74,  Alias:"Crossovers", Name:"Crossovers", Photo:"shopkeeper/productgroup/crossovers", PhotoFormat:"74", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:73}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:84,  Alias:"EQUALIZER", Name:"EQUALIZER", Photo:"shopkeeper/productgroup/equalizer", PhotoFormat:"84", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:73}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:89,  Alias:"Processors", Name:"Processors", Photo:"shopkeeper/productgroup/processors", PhotoFormat:"89", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:73}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:104,  Alias:"QF Series ", Name:"QF Series ", Photo:"", PhotoFormat:"104", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:84}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:105,  Alias:"PV Series", Name:"PV Series", Photo:"", PhotoFormat:"105", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:84}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:81,  Alias:"RX 22 / 22 XT", Name:"RX 22 / 22 XT", Photo:"shopkeeper/productgroup/rx-22-22-xt", PhotoFormat:"81", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:80}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:82,  Alias:"High Fz Drivers", Name:"High Fz Drivers", Photo:"shopkeeper/productgroup/high-fz-drivers", PhotoFormat:"82", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:80}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:110,  Alias:"Low Fz Drivers", Name:"Low Fz Drivers", Photo:"shopkeeper/productgroup/low-fz-drivers", PhotoFormat:"110", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:80}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:88,  Alias:"Bluetooth", Name:"Bluetooth", Photo:"shopkeeper/productgroup/bluetooth", PhotoFormat:"88", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:87}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:109,  Alias:"Headphones", Name:"Headphones", Photo:"shopkeeper/productgroup/headphones", PhotoFormat:"109", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:108}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:121,  Alias:"Power & Connection", Name:"Power & Connection", Photo:"", PhotoFormat:"121", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:108}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:124,  Alias:"Electric", Name:"Electric", Photo:"shopkeeper/productgroup/electric", PhotoFormat:"124", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:123}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:125,  Alias:"Bass", Name:"Bass", Photo:"shopkeeper/productgroup/bass", PhotoFormat:"125", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:123}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
-			models.ProductGroup.create({  id:126,  Alias:"Acoustic", Name:"Acoustic", Photo:"shopkeeper/productgroup/acoustic", PhotoFormat:"126", createdAt: new Date(), updatedAt: new Date(), ParentGroupId:123}, {fields:["id","Alias","Name","Photo","PhotoFormat","createdAt","updatedAt","ParentGroupId"],transaction:t}),
+			models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001816_audio",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:1}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001875_speaker",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:11}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001615_amplifier",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:12}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001616_sub-woofer",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:13}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001617_microphone",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:14}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001618_sound-processors",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:15}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001653_karaoke-speakers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:21}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001652_professional-speakers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:22}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001628_power-amplifiers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:23}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001622_csv-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:24}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001623_csd-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:25}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001624_csx-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:26}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001625_csn-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:27}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001626_csj-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:28}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001627_csp-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:29}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001636_dap-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:30}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001674_pr-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:31}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001675_pv-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:32}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/000564_hroothomeaungwin92-002wwwconeicstorepluginssevenspikesnoppluginsproductribbonsribbonpicturesmotion_l",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:33}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001676_sp-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:34}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001677_qw-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:35}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001678_vr-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:40}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001637_cs-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:41}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001638_pv-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:42}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001639_ipr-2-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:43}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001619_non-powered-mixers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:44}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001620_powered-mixers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:45}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001644_pv-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:46}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001645_fx-2-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:47}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001646_pv-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:48}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001647_xr-series",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:49}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001648_pvi-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:50}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001621_public-address-systems",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:51}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001649_escort-system",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:52}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001629_guitar-amplifiers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:55}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001641_vypyr-vip-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:56}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001642_valveking-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:57}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001630_bass-amplifiers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:58}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001643_tour-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:59}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001631_keyboard-amplifiers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:60}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001632_crest-amplifiers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:61}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001651_pvi-portable-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:62}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001744_pvx-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:63}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001793_cc-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:65}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001794_cpx-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:66}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001792_nkn-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:67}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001795_vr-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:68}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001796_pv-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:69}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001797_pr-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:70}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001799_csw-series",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:71}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001805_pvm-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:72}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001817_processing-and-effects",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:73}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001869_crossovers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:74}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001814_pvm-dms-5-drum-mic-system",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:75}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001815_karaoke-amplifier",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:76}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001823_pvx-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:77}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001840_spare-parts",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:80}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001841_rx-22-22-xt",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:81}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001845_high-fz-drivers",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:82}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001871_triflex-ii",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:83}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001883_equalizer",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:84}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001881_instrument-amplifiers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:85}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001866_consumer-electronics",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:87}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001867_bluetooth",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:88}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001882_processors",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:89}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002128_pbk-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:90}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001892_infrared-microphone",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:93}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0001902_cse-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:94}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002038_ceiling-wall-speakers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:100}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002037_phr-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:102}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002036_ws-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:103}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002045_css-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:107}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002060_accessories",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:108}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002061_headphones",
+PhotoFormat:"jpeg"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:109}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002059_low-fz-drivers",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:110}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002127_dark-matter-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:114}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002110_qw-series",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:116}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002155_home-category",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:122}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002183_electric",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:124}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002182_bass",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:125}}),
+models.ProductGroup.update({
+Photo:"shopkeeper/productgroup/0002181_acoustic",
+PhotoFormat:"png"},{fields:["Photo","PhotoFormat"],transaction:t,where:{id:126}}),
 			];
 			return Promise.all(promise);
 		});
